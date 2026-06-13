@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Modular Designer v0.1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div>
+        <h1>Modular Designer</h1>
+        <p>v0.1 · Sistema modular Heavy 2,5 × 5 m</p>
+      </div>
+      <button id="saveBtn">Guardar</button>
+    </header>
+
+    <main>
+      <section id="viewerWrap">
+        <canvas id="scene"></canvas>
+        <div class="hint">Un dedo: girar · Dos dedos: mover/zoom · Toca una pieza para seleccionarla</div>
+      </section>
+
+      <aside id="panel">
+        <h2>Biblioteca</h2>
+        <button class="piece" data-type="heavy">+ Heavyprock 2,5×5</button>
+        <button class="piece" data-type="wall">+ Panel pared</button>
+        <button class="piece" data-type="arch">+ Arco 5 m</button>
+        <button id="deleteBtn">Eliminar seleccionada</button>
+
+        <h2>Proyecto</h2>
+        <div class="stat"><span>Piezas</span><b id="pieceCount">0</b></div>
+        <div class="stat"><span>Peso aprox.</span><b id="weight">0 kg</b></div>
+        <div class="stat"><span>Superficie suelo</span><b id="area">0 m²</b></div>
+
+        <h2>Seleccionada</h2>
+        <div id="selectedInfo">Nada seleccionado</div>
+        <div class="row">
+          <button id="moveXMinus">←</button><button id="moveXPlus">→</button>
+          <button id="moveZMinus">↑</button><button id="moveZPlus">↓</button>
+        </div>
+        <button id="rotateBtn">Girar 90°</button>
+        <button id="resetBtn">Reiniciar proyecto</button>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
